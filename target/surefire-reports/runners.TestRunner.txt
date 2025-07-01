@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 28.04 s <<< FAILURE! -- in runners.TestRunner
-Ingreso a TGR.el usuario entra SDC -- Time elapsed: 27.03 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 50.25 s <<< FAILURE! -- in runners.TestRunner
+Ingreso a TGR.el usuario entra SDC -- Time elapsed: 49.65 s <<< ERROR!
 org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(@class, 'panel-heading') and contains(text(), 'Listado de Correos Electrónicos')]"}
   (Session info: chrome=137.0.7151.120)
@@ -10,9 +10,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e48ee7e3c0135599995d431b304f474, findElement {value=//*[contains(@class, 'panel-heading') and contains(text(), 'Listado de Correos Electrónicos')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64145}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64145/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e48ee7e3c0135599995d431b304f474
+Command: [a729cde2224af670d67bc1b1a8dd3bbf, findElement {value=//*[contains(@class, 'panel-heading') and contains(text(), 'Listado de Correos Electrónicos')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56064}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56064/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a729cde2224af670d67bc1b1a8dd3bbf
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -30,5 +30,5 @@ Session ID: 0e48ee7e3c0135599995d431b304f474
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 	at stepdefs.SimpleSteps.validar_texto_en_clase(SimpleSteps.java:131)
-	at ✽.la pagina deberia mostrar en "panel-heading" el texto "Listado de Correos Electrónicos"(file:///C:/Users/diego/Desktop/cucumber-tests-v3/src/test/resources/features/tgrTest.feature:22)
+	at ✽.la pagina deberia mostrar en "panel-heading" el texto "Listado de Correos Electrónicos"(file:///C:/Users/diego/Desktop/cucumber-tests-v3/src/test/resources/features/tgrTest.feature:23)
 

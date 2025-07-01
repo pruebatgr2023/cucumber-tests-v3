@@ -20,5 +20,5 @@ Feature: Ingreso a TGR
     When se hace foco en el elemento con xpath "//*[@id='divCorreos']/div[1]"
     And se espera 3 segundos
     When se cliquea el elemento con id "btnListaCorreo"
+    And se espera 5 segundos
     Then la pagina deberia mostrar en "panel-heading" el texto "Listado de Correos Electrónicos"
-    And se espera 3 segundos
