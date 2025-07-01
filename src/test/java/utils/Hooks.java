@@ -14,6 +14,13 @@ public class Hooks {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--start-maximized");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-geolocation");
+        options.addArguments("--safebrowsing-disable-download-protection");
+        options.addArguments("--disable-save-password-bubble");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+
 
         driver = new ChromeDriver(options);
 

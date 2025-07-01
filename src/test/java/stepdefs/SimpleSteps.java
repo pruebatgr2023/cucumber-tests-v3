@@ -4,6 +4,7 @@ import static utils.Hooks.driver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.By;
@@ -16,6 +17,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.ConfigReader;
 //import io.cucumber.messages.types.Duration;
 import utils.ExtentReportManager;
 import utils.Hooks;
@@ -63,8 +65,8 @@ public class SimpleSteps {
     }
 
 
-    @When("se cliquea el elemento {string} con la clase {string}")
-    @Given("que se cliquea el elemento {string} con la clase {string}")
+    @When("cliquea el elemento {string} con la clase {string}")
+    @Given("se cliquea el elemento {string} con la clase {string}")
     public void click_por_clase(String tag, String clase) {
         WebElement element = driver.findElement(By.cssSelector(tag + "." + clase));
         element.click();
@@ -89,13 +91,26 @@ public class SimpleSteps {
     }
 
     @When("en el elemento {string} se ingresa el texto {string}")
-    @Given("que en el elemento {string} se ingresó el texto {string}")
-    public void escribir_por_selector(String selector, String texto) {
-        WebElement element = driver.findElement(By.cssSelector(selector));
-        element.clear();
-        element.sendKeys(texto);
-        ExtentReportManager.logStep(driver, "Texto ingresado en selector: " + selector + ": " + texto);
+@Given("que en el elemento {string} se ingresó el texto {string}")
+public void escribir_por_selector(String selector, String texto) {
+    try {
+        String valor = ConfigReader.get(texto);
+        if (valor != null && !valor.isEmpty()) {
+            texto = valor;  // reemplaza si existe en properties texto exacto
+        }
+    } catch (NoSuchElementException | NullPointerException e) {
+        // No se encontró la clave en el properties o es nulo, usar texto original
+    } catch (Exception e) {
+        // Cualquier otra excepción, opcionalmente loguear y continuar
     }
+
+    WebElement element = driver.findElement(By.cssSelector(selector));
+    element.clear();
+    element.sendKeys(texto);
+    ExtentReportManager.logStep(driver, "Texto ingresado en selector: " + selector + ": " + texto);
+}
+
+
 
     @Then("la página debería contener el texto {string}")
     public void validar_texto_en_pagina(String textoEsperado) {

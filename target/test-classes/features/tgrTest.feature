@@ -2,8 +2,8 @@ Feature: Ingreso a TGR
 
   Background: Usuario abre TGR
     Given que se navega a la página "http://intranettest/SistemaGestionNewWeb/index"
-    When en el elemento "#intra_username" se ingresa el texto "ralvarez"
-    When en el elemento "#textfield2" se ingresa el texto "12345678"
+    When en el elemento "#intra_username" se ingresa el texto "usuario_intranet1"
+    When en el elemento "#textfield2" se ingresa el texto "clave_intranet1"
     When se cliquea el elemento con id "btn1"
     And se espera que la página cargue completamente
     When se cliquea el elemento "autenticacion_req" con el texto "Sistema de Clientes"
