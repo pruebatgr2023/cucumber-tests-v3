@@ -1,5 +1,5 @@
 utils\ExtentReportManager.class
 runners\TestRunner.class
+utils\ConfigReader.class
 stepdefs\SimpleSteps.class
-utils\ScreenshotUtil.class
 utils\Hooks.class

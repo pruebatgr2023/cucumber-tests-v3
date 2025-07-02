@@ -1,0 +1,18 @@
+/* Custom CSS for Extent Spark Report */
+
+/* Estilos para la barra de navegación superior */
+.nav-wrapper {
+    background-color: #1e1e2f !important; /* Color de fondo oscuro */
+}
+
+/* Estilos para el logo o título del reporte */
+.brand-logo {
+    font-weight: bold; /* Negrita */
+    color: #00e676 !important; /* Color verde brillante */
+}
+
+/* Estilos para los paneles de contenido de los tests (tarjetas) */
+.test-content .card-panel {
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 0 35px #00e5ff; /* Sombra con efecto de brillo azul */
+}

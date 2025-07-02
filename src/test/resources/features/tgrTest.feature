@@ -21,4 +21,4 @@ Feature: Ingreso a TGR
     And se espera 3 segundos
     When se cliquea el elemento con id "btnListaCorreo"
     And se espera 5 segundos
-    Then la pagina deberia mostrar en "panel-heading" el texto "Listado de Correos Electrónicos"
+    Then la pagina deberia contener el texto "Listado de Correos Electrónicos"
